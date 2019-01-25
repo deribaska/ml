@@ -62,7 +62,9 @@ def train_and_evaluate(output_dir, num_train_steps):
 
 
 # Launch tensorboard
-#from google.datalab.ml import TensorBoard
+#>tensorboard --logdir=C:\Users\Lena\GitHub\ml\trained_model --port=80
+#http://localhost:80
+from google.datalab.ml import TensorBoard
 
 OUTDIR = 'trained_model'
 #TensorBoard().start(OUTDIR)
