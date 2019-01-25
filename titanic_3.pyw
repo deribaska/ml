@@ -14,7 +14,7 @@ tf.logging.set_verbosity(tf.logging.ERROR)
 pd.options.display.max_rows = 10
 pd.options.display.float_format = '{:.1f}'.format
 
-connection=cx_Oracle.connect('ml/ml@127.0.0.1:1521/orcl')
+connection=cx_Oracle.connect('ml/ml@127.0.0.1:1521/XE')
 sql='SELECT PCLASS,SEX,SIBSP,PARCH,FARE,A10,A20,A30,A40,A50,A60,A70,A80,ANA,R1,R2,R3,R4,RNA,T1,T2,T3,T4,T5,CA,CB,CC,CD,CE,CF,CG,CN,EMBARKED1 E1,EMBARKED2 E2,EMBARKED3 E3,SURVIVED FROM TITANIC_2'
 #sql='SELECT PCLASS,SEX,SURVIVED FROM TITANIC_2'
 df1=pd.read_sql(sql,con=connection)
